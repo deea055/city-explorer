@@ -100,3 +100,19 @@ footer {
     background-color: #1f3b5d;
     color: #ffffff;
 }
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    main {
+        padding: 15px;
+    }
+}
