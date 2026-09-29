@@ -1,154 +1,109 @@
-* {
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="ro">
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    color: #333333;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Explorer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
 
-/* ANTET */
+<body>
 
-.site-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    background-color: #1f3b5d;
-    color: white;
-}
+    <header class="site-header">
+        <h1>City Explorer</h1>
 
-.site-header h1 {
-    margin: 0;
-}
+        <nav class="menu">
+            <a href="#destinatii">Destinații</a>
+            <a href="#planifica">Planifică</a>
+            <a href="#recomandari">Recomandări</a>
+        </nav>
+    </header>
 
-.menu {
-    display: flex;
-    gap: 20px;
-}
+    <main>
 
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
+        <section id="destinatii">
+            <h2>Destinații</h2>
 
-.menu a:hover {
-    text-decoration: underline;
-}
+            <div class="cards">
 
-/* CONTINUT */
+                <article class="card featured">
+                    <h3>Paris</h3>
+                    <p><strong>Țara:</strong> Franța</p>
+                    <p>Un oraș renumit pentru artă, arhitectură și gastronomie.</p>
+                    <p><strong>Durata recomandată:</strong> 4 zile</p>
+                </article>
 
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px 20px;
-}
+                <article class="card">
+                    <h3>Roma</h3>
+                    <p><strong>Țara:</strong> Italia</p>
+                    <p>Un oraș plin de istorie și monumente impresionante.</p>
+                    <p><strong>Durata recomandată:</strong> 4 zile</p>
+                </article>
 
-section {
-    margin-bottom: 50px;
-}
+                <article class="card">
+                    <h3>Barcelona</h3>
+                    <p><strong>Țara:</strong> Spania</p>
+                    <p>O destinație cunoscută pentru arhitectură și plaje.</p>
+                    <p><strong>Durata recomandată:</strong> 5 zile</p>
+                </article>
 
-h2 {
-    color: #1f3b5d;
-    margin-bottom: 20px;
-}
+                <article class="card">
+                    <h3>Lisabona</h3>
+                    <p><strong>Țara:</strong> Portugalia</p>
+                    <p>Un oraș colorat, cu străzi frumoase și priveliști spectaculoase.</p>
+                    <p><strong>Durata recomandată:</strong> 4 zile</p>
+                </article>
 
-/* DESTINATII */
+                <article class="card">
+                    <h3>Praga</h3>
+                    <p><strong>Țara:</strong> Cehia</p>
+                    <p>Un oraș cunoscut pentru arhitectura sa medievală.</p>
+                    <p><strong>Durata recomandată:</strong> 3 zile</p>
+                </article>
 
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
+            </div>
+        </section>
 
-.card {
-    background-color: white;
-    padding: 20px;
-    border: 1px solid #d0d7e2;
-    border-radius: 10px;
-}
+        <section id="planifica">
+            <h2>Planifică</h2>
 
-.card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+            <form>
+                <label for="name">Nume</label>
+                <input id="name" name="name" type="text">
 
-.featured {
-    border: 2px solid #5b3fd9;
-    background-color: #f3f0ff;
-}
+                <label for="destination">Destinație</label>
+                <select id="destination" name="destination">
+                    <option value="">Alege...</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Roma">Roma</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Lisabona">Lisabona</option>
+                    <option value="Praga">Praga</option>
+                </select>
 
-/* FORMULAR */
+                <label for="days">Număr de zile</label>
+                <input id="days" name="days" type="number">
 
-form {
-    max-width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+                <button type="submit">Planifică excursia</button>
+            </form>
+        </section>
 
-label {
-    font-weight: bold;
-    margin-top: 10px;
-}
+        <section id="recomandari">
+            <h2>Recomandări</h2>
 
-input,
-select {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #cccccc;
-    border-radius: 6px;
-    font-size: 16px;
-}
+            <ul>
+                <li>Rezervă cazarea din timp.</li>
+                <li>Verifică vremea înainte de plecare.</li>
+                <li>Planifică obiectivele turistice pe care vrei să le vizitezi.</li>
+            </ul>
+        </section>
 
-input:focus,
-select:focus {
-    outline: 2px solid #5b3fd9;
-}
+    </main>
 
-button {
-    margin-top: 15px;
-    padding: 12px;
-    border: none;
-    border-radius: 6px;
-    background-color: #1f3b5d;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-}
+    <footer class="site-footer">
+        <p>Vaduva Andreea, 2026</p>
+    </footer>
 
-button:hover {
-    opacity: 0.9;
-}
-
-/* RECOMANDARI */
-
-#recomandari ul {
-    line-height: 1.8;
-}
-
-/* SUBSOL */
-
-.site-footer {
-    background-color: #1f3b5d;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-/* TELEFON */
-
-@media (max-width: 600px) {
-    .site-header {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
+</body>
+</html>
